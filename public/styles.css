@@ -6,16 +6,27 @@
 
 body {
   font-family: Inter, system-ui, sans-serif;
-  background: linear-gradient(180deg, #0b1221 0%, #15243d 100%);
+  background: radial-gradient(circle at top left, rgba(255, 131, 197, 0.26), transparent 18%),
+              radial-gradient(circle at 20% 70%, rgba(120, 100, 255, 0.22), transparent 16%),
+              radial-gradient(circle at 85% 20%, rgba(92, 255, 211, 0.18), transparent 12%),
+              linear-gradient(180deg, #140f2f 0%, #1c1c43 45%, #10172f 100%);
   color: #f4f7fb;
   min-height: 100vh;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 .container {
-  max-width: 900px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2.5rem;
+  background: rgba(7, 12, 28, 0.92);
+  border-radius: 34px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 35px 120px rgba(0, 0, 0, 0.34);
+  backdrop-filter: blur(18px);
+  position: relative;
+  z-index: 1;
 }
 
 .hero {
@@ -25,6 +36,15 @@ body {
   border-radius: 24px;
   backdrop-filter: blur(12px);
   background: rgba(255, 255, 255, 0.05);
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.18);
+  margin-bottom: 1rem;
 }
 
 .hero h1 {
